@@ -107,7 +107,7 @@ const checkForm = async (e) => {
                         <RouterLink to="register">
                             <a href="#" class="font-medium text-indigo-500">Create account</a>
                         </RouterLink>
-                        <a href="#" class="text-gray-600">Forgot password?</a>
+                        <!-- <a href="#" class="text-gray-600">Forgot password?</a> -->
                     </div>
                 </div>
             </div>
