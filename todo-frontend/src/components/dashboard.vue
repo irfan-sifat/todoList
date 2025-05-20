@@ -182,7 +182,7 @@ input[type=checkbox]:checked+label span:nth-of-type(2) {
 <template>
     <div class="grid grid-cols-2 gap-10">
         <div class="col-span-2 md:col-span-1">
-            <div class="h-screen font-medium m-10">
+            <div class="md:!h-screen font-medium m-10">
             <button class="bg-red-400 text-white px-2 py-1 rounded-sm float-end cursor-pointer" @click="logout()">Logout</button>
                 <div class="flex mb-6">
                     <svg class="h-8 w-8 text-indigo-500 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"

@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import api from '@/axios'
 import { useRouter } from 'vue-router'
+import logo from '@/assets/logo.png'
 
 const router = useRouter()
 
@@ -61,10 +62,11 @@ const checkForm = async (e) => {
 
 <template>
     <div class="bg-gray-200 font-sans text-gray-700">
-        <div class="container mx-auto p-8 flex">
+        <div class="container mx-auto p-8 flex flex-col md:!flex-row">
+            
+                    <img :src="logo" alt="" class="rounded-full w-30 md:!w-auto mx-auto">
             <div class="max-w-md w-full mx-auto">
                 <h1 class="text-4xl text-center mb-12 font-thin">Welcome ToDo App</h1>
-
                 <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
                     <div class="p-8">
                         <form method="POST" class="" action="#" @submit="checkForm">

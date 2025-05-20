@@ -18,7 +18,16 @@ router.beforeEach((to, from, next) => {
     const token = localStorage.getItem('auth_token')
     if (to.meta.requiresAuth && !token) {
       next('/')
+    } 
+    else if ((to.name === 'Login' || to.name === 'Register') && token) {
+    // Logged in, trying to access login/register
+    if (from.name && from.name !== 'Login' && from.name !== 'Register') {
+      next(from.fullPath) // go back to previous page if available and safe
     } else {
+      next('/dashboard') // fallback to dashboard to prevent infinite redirect
+    }
+  } 
+    else {
       next()
     }
 })
